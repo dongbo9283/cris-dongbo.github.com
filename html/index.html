@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>聚划算-首页</title>
+<link rel="shortcut icon" href="../images/title.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link href="../css/swiper.min.css" rel="stylesheet" />
+<style>
+	html{font-size: 20px;}
+	header{height:2.525rem; width: 100%;background: -webkit-linear-gradient(#fff,#ebebeb) }
+	.logo{height: 2.525rem; width: 3.7rem;background: url(../images/logo.png) no-repeat center; background-size:3.7rem 1rem;margin:auto;}
+	.back{background:url(../images/back.png) no-repeat; background-size:contain;height:1.55rem; width: 3.2rem; position: absolute;top:0.55rem; left: 0.5rem; }
+	.banner{height: 6.675rem;width: 16rem; margin: auto;}
+	.banner img{height:100%;width: 100%}
+	.btn{text-align: center;margin-top: 0.5rem;}
+	.btn span{height: 0.25rem;width: 0.25rem;background: #a9a9a9; border-radius: 50%;display:inline-block; vertical-align: top; margin: 0 0.125rem;}
+	.btn .on{background:#ff4300;}
+	nav ul{overflow: hidden;}
+	nav li{float: left;width: 25%; text-align: center;}
+	nav li a{display: block;background:url(../images/nav.png) no-repeat top;font-size: 0.5rem;padding-top: 2.45rem; margin-bottom: 1rem;margin-top: 1rem;width: 100%;height: 100%;background-size: 2rem 2rem;}
+	.paihang{width: 15rem;margin: auto; height: 1.95rem;overflow: hidden; position: relative; border-bottom: 0.1rem solid #dcdcdc;line-height: 1.95rem; margin-bottom: 0.275rem;}
+	.paihang span{height: 0.75rem; width: 0.1rem; background: #d51938; position: absolute; left: 0; top: 50%; margin-top: -0.375rem;border-radius: 0.025rem;}
+	#pai{font-size: 0.6rem; color: #333;  margin-left: 0.55rem; font-weight: 700;float: left;}
+	#top{float: right;font-size: 0.6rem; color: #333;}
+	.chanpin{width: 15rem; margin: auto;}
+	.chanpin div{width: 15rem;height: 3rem;margin-top: 0.5rem;}
+	.chanpin div span{height: 3rem;width: 1.5rem; background: #e00202;display: block;font-size: 0.8rem; color: #fff; font-weight: 900;line-height: 3rem; text-align: center; float: left;}
+	.chanpin div img{height: 3rem;width: 4.5rem;float: left;display: block;vertical-align: top;}
+	.chanpin div .message{height: 3rem; background: #f4f4f4;float: left; width: 9rem;margin-top:0; overflow: hidden;}
+	.chanpin div .message .m1{font-size: 0.55rem; font-weight:bold;color: #999;line-height: 0.9rem;padding-top: 0.4rem;padding-left: 0.55rem; float: left;}
+	.chanpin div .message .m2{font-size: 0.55rem; font-weight:bold;color: #d51938;;padding-top: 1.075rem;padding-right: 0.45rem;float: right;}
+	.chanpin div .message .jiao{display: block; float: right; padding-right: 0.5rem;width: 0.325rem; height: 0.55rem; padding-top: 1.075rem;}
+	.dao{width: 15rem; margin: auto;  margin-top: 0.5rem;}
+	.dao .title{height: 2rem;background:#f5f5f5; font-size: 0.6rem; font-weight: 600; color: #666; line-height: 2rem; text-align: center;}
+	.dao .title p{float: left;padding-left: 4.75rem;}
+	.dao .title .jiao2{width: 0.325rem; height: 0.55rem;display: block;float: right; padding-right: 0.5rem; padding-top: 0.825rem;}
+	.dao .tt{height: 8.8rem;width: 3.75rem; padding-top: 0.5rem;}
+	.dao .nav1{height: 8.75rem; width: 11.2rem;border-top: 0.025rem solid #eee; float: right;margin-top: 0.5rem;border-left: 0.025rem solid #eee;}
+	.dao .nav1 li{border-right: 0.025rem solid #eee;border-bottom: 0.025rem solid #eee;height: 2.175rem; width: 3.68rem;float: left; line-height: 2.175rem; font-size: 0.65rem; color: #999; text-align: center;}
+	.dao .nav1 li span{color: #d51942}
+	#duan{border-top: 0.025rem solid #dcdcdc; border-left: 0.025rem solid #dcdcdc;width: 14.95rem;height: 3.975rem;margin: 0.8rem auto;overflow: hidden; margin-bottom: 0.7rem;}
+	#duan li{border-right: 0.025rem solid #dcdcdc;border-bottom: 0.025rem solid #dcdcdc; height: 1.175rem; width: 4.93rem; float: left; font-size:0.6rem; color: #999; text-align: center;padding-top: 2.775rem; position: relative;}
+	#duan li img{position: absolute;top: 0.775rem; left: 2rem;height: 1.1rem; width:0.95rem; }
+	footer{height:2.2rem; width: 100% ;background:#f8f8f8; padding-left: 0.75rem; overflow: hidden; }
+	footer .denglu{float: left; line-height: 2.2rem; font-size: 0.6rem;color: #333;}
+	footer .zhuce{float: left; line-height: 2.2rem; font-size: 0.6rem; margin-left: 1.2rem;color: #333;}
+	footer .top{font-size:0.55rem; color: #333; float: left;line-height: 2.2rem;margin-left: 8.175rem; }
+	footer .jiao2{height: 0.225rem; width: 0.425rem;margin-left: 0.475rem; margin-top: 0.925rem}
+	.swiper-container{ height: 7.45rem;width:100%; margin: auto; }
+	.swiper-slide{ width:16rem; height:6.675rem; text-align:center;}
+	.swiper-pagination{bottom:0.05rem}
+</style>
+</head>
+<script src="../js/swiper.min.js"></script>
+<script>
+;(function (win,doc){
+	function change(){
+		doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+	}
+	change();
+	
+	win.addEventListener('resize',change,false);
+})(window,document);
+</script>
+<body>
+	<header>
+		<div class="logo"></div>
+		<div class="back"></div>
+	</header>
+	<div class="swiper-container">
+    	<div class="swiper-wrapper">
+        	<div class="swiper-slide" style="background:url(../images/banner.jpg) no-repeat; background-size:100% 100%;"></div>
+        	<div class="swiper-slide" style="background:url(../images/banner2.jpg) no-repeat; background-size:100% 100%;"></div>
+        	<div class="swiper-slide" style="background:url(../images/banner3.jpg) no-repeat; background-size:100% 100%;"></div>
+        	<div class="swiper-slide" style="background:url(../images/banner4.jpg) no-repeat; background-size:100% 100%;"></div>
+        	<div class="swiper-slide" style="background:url(../images/banner5.jpg) no-repeat; background-size:100% 100%;"></div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+    <script>
+    new Swiper('.swiper-container',{
+		spaceBetween:10,		//每个slider之间的间距
+		pagination:'.swiper-pagination', 	//生成小圆点
+		paginationClickable:true,			//小圆点可以点击
+		loop:true,							//无缝
+		autoplay:1000,						//自动播放
+		autoplayDisableOnInteraction:false	//用户操作完，自动播放
+	});
+	</script>
+	<nav>
+		<ul>
+			<li><a href="javascript:;">商品</a></li>
+			<li><a href="javascript:;">生活</a></li>
+			<li><a href="javascript:;">品牌</a></li>
+			<li><a href="javascript:;">聚宝盆</a></li>
+			<li><a href="javascript:;">聚名品</a></li>
+			<li><a href="javascript:;">聚家装</a></li>
+			<li><a href="javascript:;">聚透</a></li>
+			<li><a href="javascript:;">客户端</a></li>
+		</ul>
+	</nav>
+	<div class="paihang">
+		<span></span>
+		<p id="pai">聚划算热卖排行</p>
+		<p id="top">TOP10</p>
+	</div>
+	<section class="chanpin">
+		<div>
+			<span>1</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>2</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>3</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>4</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>5</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>6</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>7</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>8</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>9</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+		<div>
+			<span>10</span>
+			<img src="../images/n1.jpg" alt="">
+			<div class="message">
+				<p class="m1">已售68423<br>2.3折&nbsp&nbsp&nbsp¥299</p>
+				<img src="../images/jiao.png" alt="" class="jiao">
+				<p class="m2">¥51</p>	
+			</div>
+		</div>
+	</section>
+	<nav class="dao">
+		<div class="title">
+		<p>更多划算 逛起来！</p>
+		<img src="../images/jiao.png" alt="" class="jiao2">
+		</div>
+		<img src="../images/t1.png" alt="" class="tt">
+		<div class="nav1">
+			<ul>
+				<li><span>服饰</span></li>
+				<li>配饰</li>
+				<li>美妆</li>
+				<li>鞋包</li>
+				<li>食品</li>
+				<li><span>家居</span></li>
+				<li>运动</li>
+				<li><span>电器</span></li>
+				<li>百货</li>
+				<li>母婴</li>
+				<li>数码</li>
+				<li>更多</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="dao">
+		<div class="title">
+		<p>更多划算 逛起来！</p>
+		<img src="../images/jiao.png" alt="" class="jiao2">
+		</div>
+		<img src="../images/t1.png" alt="" class="tt">
+		<div class="nav1">
+			<ul>
+				<li><span>服饰</span></li>
+				<li>配饰</li>
+				<li>美妆</li>
+				<li>鞋包</li>
+				<li>食品</li>
+				<li><span>家居</span></li>
+				<li>运动</li>
+				<li><span>电器</span></li>
+				<li>百货</li>
+				<li>母婴</li>
+				<li>数码</li>
+				<li>更多</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="dao">
+		<div class="title">
+		<p>更多划算 逛起来！</p>
+		<img src="../images/jiao.png" alt="" class="jiao2">
+		</div>
+		<img src="../images/t1.png" alt="" class="tt">
+		<div class="nav1">
+			<ul>
+				<li><span>服饰</span></li>
+				<li>配饰</li>
+				<li>美妆</li>
+				<li>鞋包</li>
+				<li>食品</li>
+				<li><span>家居</span></li>
+				<li>运动</li>
+				<li><span>电器</span></li>
+				<li>百货</li>
+				<li>母婴</li>
+				<li>数码</li>
+				<li>更多</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="dao">
+		<div class="title">
+		<p>更多划算 逛起来！</p>
+		<img src="../images/jiao.png" alt="" class="jiao2">
+		</div>				
+	</nav>
+	<ul id="duan">
+		<li><img src="../images/apple.png" alt="">iOS客户端</li>
+		<li><img src="../images/apple.png" alt="">安卓客户端</li>
+		<li><img src="../images/apple.png" alt="">意见反馈</li>
+	</ul>
+	<footer>
+		<p class="denglu"><a href="javascript">登录</a></p>
+		<p class="zhuce"><a href="javascript">注册</a></p>
+		<p class="top">TOP</p>
+		<img src="../images/jiao2.png" alt="" class="jiao2">
+	</footer>
+</body>
+</html>
